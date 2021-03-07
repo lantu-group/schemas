@@ -1,5 +1,5 @@
-import { Document } from 'mongoose';
-declare enum Role {
+import { Document, Schema as MSchema } from 'mongoose';
+export declare enum Role {
     ADMIN = "admin",
     GUEST = "guest",
     MERCHANT = "merchant"
@@ -19,5 +19,4 @@ export declare class User {
     state: UserState;
 }
 export declare type UserDocument = User & Document;
-export declare const UserSchema: import("mongoose").Schema<Document<User, {}>, import("mongoose").Model<any, any>, undefined>;
-export {};
+export declare const UserSchema: MSchema;

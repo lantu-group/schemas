@@ -1,5 +1,5 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Document } from 'mongoose';
+import { Document, Schema as MSchema } from 'mongoose';
 
 export enum Role {
   ADMIN = 'admin', // 管理员
@@ -39,4 +39,4 @@ export class User {
 }
 
 export type UserDocument = User & Document;
-export const UserSchema = SchemaFactory.createForClass(User);
+export const UserSchema: MSchema = SchemaFactory.createForClass(User);
